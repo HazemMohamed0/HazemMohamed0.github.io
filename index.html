@@ -1,40 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hazem Dev | Mobile App Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hazem Dev | Mobile App Developer</title>
+  <!-- Link to your CSS file -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Hazem Dev</h1>
-    <p>Mobile App Developer | Flutter & Kotlin</p>
+  <!-- Header / Hero Section -->
+  <header class="hero">
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a class="logo" href="#">HazemDev</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <h1>Hi, I'm Hazem Dev</h1>
+      <p>Mobile App Developer | Flutter &amp; Kotlin</p>
+      <a class="cta-button" href="#projects">View My Work</a>
+    </div>
   </header>
-  
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hi, I'm Hazem—a passionate mobile app developer with expertise in Flutter and Kotlin. I create intuitive and innovative mobile applications.</p>
+
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I'm a passionate mobile app developer specializing in Flutter and Kotlin.
+        I build interactive, high-performance applications with a focus on
+        clean design and smooth user experiences.
+      </p>
+    </div>
   </section>
-  
-  <section id="projects">
-    <h2>Projects</h2>
-    <article>
-      <h3>Project Title</h3>
-      <p>Brief description of your project, the technologies used, and what it does.</p>
-      <a href="https://github.com/yourusername/project">View on GitHub</a>
-    </article>
-    <!-- Add more projects as needed -->
+
+  <!-- Projects Section -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <!-- Example Project Card -->
+        <div class="project-card">
+          <img src="project1-screenshot.jpg" alt="Project 1 Screenshot" />
+          <div class="card-content">
+            <h3>Project One</h3>
+            <p>A brief description of Project One highlighting its interactive features and the technologies used.</p>
+            <a class="project-link" href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+        <!-- Repeat additional project cards as needed -->
+      </div>
+    </div>
   </section>
-  
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:hazem@example.com">hazem@example.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/hazem">linkedin.com/in/hazem</a></p>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </section>
-  
-  <footer>
-    <p>&copy; 2025 Hazem Dev</p>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Hazem Dev. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/hazem" target="_blank">LinkedIn</a>
+      </div>
+    </div>
   </footer>
+
+  <!-- JavaScript for smooth scrolling -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    });
+  </script>
 </body>
 </html>
