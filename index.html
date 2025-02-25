@@ -1,60 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Portfolio Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hazem Mohamed - Portfolio</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+  <video autoplay loop muted plays-inline class="back-vid">
+    <source src="images/galaxy.mp4" type="video/mp4">
+  </video>
+  
+  <section class="main-section">
     <nav>
-        <div class="container">
-            <div class="logo"><h1><strong>Stephen</strong> Robert</h1></div>
-            <div class="links">
-                <a href="">Service</a>
-                <a href="">Works</a>
-                <a href="">Notes</a>
-                <a href="">Contacts</a>
-            </div>
-            <div class="social-links">
-                <div class="twitter">
-                    <i class="fa-brands fa-x-twitter"></i>
-                    <label for="">Twitter</label>
-                </div>
-                <div class="github">
-                    <i class="fa-brands fa-github"></i>
-                    <label for="">Github</label>
-                </div>
-                <div class="mail"><i class="fa-regular fa-envelope"></i></div>
-            </div>
-        </div>
+      <h1 data-aos="zoom-in" data-aos-duration="1000"><span style="color: #4acfee;">Port</span>folio</h1>
+      <ul>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a class="active" href="#">Home </a></li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">About</a></li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#">Projects</a></li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="skills.html">Skills</a></li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="#">Contact</a></li>
+      </ul>
     </nav>
-    <section>
-        <div class="content">
-            <div class="heading">
-                <h3 data-aos="fade-right" data-aos-duration="1100" data-aos-delay="200">Front-end Developer</h3>
-                <h1 data-aos="fade-right" data-aos-duration="1100" data-aos-delay="400">Talk is Cheap. <span>Show me the Code</span></h1>
-                <p data-aos="fade-right" data-aos-duration="1100" data-aos-delay="600">I design and code beautifully simple things. and I love what I do.</p>
-                <button data-aos="fade-right" data-aos-duration="1100" data-aos-delay="800">LET'S CHAT</button>
+
+    <div class="hero">
+      <div class="hero-info">
+        <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">Hi, I'm Hazem Mohamed</h1>
+        <h2 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">I'm a Flutter Developer</h2>
+        <p data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1000">I am a Mobile App Developer skilled in Flutter, Dart, Java, and Kotlin, with a focus on creating efficient, user-friendly, and secure applications. Currently finishing my Computer Science degree, I specialize in creating efficient, user-friendly, and secure apps, integrating modern technologies.</p>
+        <div class="Buttons">
+          <div class="dropdown" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="1100">
+            <button id="hireBtn" class="btn">Hire me</button>
+            <div class="dropdown-content">
+              <a href="https://wa.me/201155455519" target="_blank">
+                <i class='bx bxl-whatsapp'></i> WhatsApp
+              </a>
+              <a href="https://t.me/+201155455519" target="_blank">
+                <i class='bx bxl-telegram'></i> Telegram
+              </a>
+              <a href="https://www.linkedin.com/in/hazem-mohamed-21958b345/" target="_blank">
+                <i class='bx bxl-linkedin'></i> LinkedIn
+              </a>
             </div>
-            <div class="image" data-aos="fade-left" data-aos-duration="1500"><img src="profile.png" alt=""></div>
+          </div>
+          <ul class="ul-icons">
+            <li><a href="https://github.com/HazemMohamed0" target="_blank" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200"><i class='bx bxl-github'></i></a></li>
+            <li><a href="https://x.com/hazem_mohamed0_" target="_blank" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1300"><i class='bx bxl-twitter'></i></a></li>
+            <li><a href="https://www.linkedin.com/in/hazem-mohamed-21958b345/" target="_blank" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1400" ><i class='bx bxl-linkedin'></i></a></li>
+            <li><a href="https://www.facebook.com/hazemswefy11/" target="_blank" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500"><i class='bx bxl-facebook-circle'></i></a></li>
+          </ul>
         </div>
-    </section>
-    <div class="quality">
-        <div class="experience">
-            <h1>12</h1>
-            <label for="">YEARS EXPERIENCE</label>
-        </div>
-        <div class="experience gap">
-            <h1>165</h1>
-            <label for="">PROJECTS COMPLETED ON 18 COUNTRIES</label>
-        </div>
+      </div>
+
+      <div class="hero-img" data-aos="zoom-in-left" data-aos-duration="2500">
+        <img src="images/man1.png" alt="Hazem Mohamed" >
+      </div>
     </div>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+
+    <div class="info-sec">
+      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1600">
+        <h1>1+</h1>
+        <p>Years of <br> Experience</p>
+      </div>
+      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1700">
+        <h1>Many</h1>
+        <p>Technical <br> Skills</p>
+      </div>
+      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1800">
+        <h1>4+</h1>
+        <p>Projects <br> Completed</p>
+      </div>
+      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1900">
+        <h1>100%</h1>
+        <p>Satisfaction <br> Of Clients</p>
+      </div>
+    </div>
+  </section>
+  
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    
+    // Dropdown functionality
+    const hireBtn = document.getElementById("hireBtn");
+    const dropdown = document.querySelector(".dropdown");
+    
+    // Toggle dropdown when button is clicked
+    hireBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      dropdown.classList.toggle("active");
+    });
+    
+    // Close dropdown when clicking elsewhere
+    window.addEventListener("click", () => {
+      dropdown.classList.remove("active");
+    });
+  </script>
 </body>
 </html>

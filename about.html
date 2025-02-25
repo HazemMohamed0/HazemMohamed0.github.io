@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Hazem Mohamed - About Me</title>
+
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* =======================================
+         GENERAL STYLES
+      ======================================= */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #0e1217;
+      }
+
+      /* Background Video */
+      .back-vid {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        object-fit: cover;
+      }
+
+      /* Navigation */
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 10%;
+        background-color: transparent;
+      }
+      nav h1 {
+        color: white;
+        font-size: 28px;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+      nav ul li a:hover,
+      nav ul li a.active {
+        color: #4acfee;
+      }
+
+      /* Main Section */
+      .main-section {
+        width: 100%;
+        min-height: 100vh;
+        position: relative;
+      }
+
+      /* =======================================
+         ABOUT SECTION
+      ======================================= */
+      .about-section {
+        padding: 0 10%;
+        color: white;
+        margin-bottom: 80px;
+      }
+
+      .about-header {
+        margin-bottom: 30px;
+      }
+
+      .about-header h1 {
+        font-size: 40px;
+        margin-bottom: 15px;
+      }
+
+      .about-header h2 {
+        font-size: 25px;
+        text-transform: uppercase;
+        background: linear-gradient(
+          to right,
+          #4acfee,
+          #53f8c9,
+          #6070fd,
+          #5bbdff,
+          #4acfee
+        );
+        background-size: 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: animate-gradient 2.5s linear infinite;
+        margin-bottom: 20px;
+      }
+
+      /* Gradient animation */
+      @keyframes animate-gradient {
+        0% {
+          background-position: 0%;
+        }
+        100% {
+          background-position: 200%;
+        }
+      }
+
+      .about-content {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 50px;
+      }
+
+      .about-img {
+        flex: 1;
+        min-width: 300px;
+        max-width: 400px;
+        height: 400px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 0 15px #4acfee;
+        transition: 0.5s;
+      }
+
+      .about-img:hover {
+        box-shadow: 0 0 25px #4acfee;
+        transform: scale(1.02);
+      }
+
+      .about-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .about-text {
+        flex: 2;
+      }
+
+      .about-text p {
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+
+      /* =======================================
+         EXPERIENCE SECTION (SINGLE COLUMN)
+      ======================================= */
+      .experience-section {
+        margin-top: 50px;
+      }
+
+      .experience-header {
+        margin-bottom: 30px;
+      }
+
+      .experience-header h2 {
+        font-size: 30px;
+        text-transform: uppercase;
+        background: linear-gradient(
+          to right,
+          #4acfee,
+          #53f8c9,
+          #6070fd,
+          #5bbdff,
+          #4acfee
+        );
+        background-size: 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: animate-gradient 2.5s linear infinite;
+      }
+
+      /* Experience list container */
+      .experience-list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      /* Individual experience card */
+      .experience-item {
+        background-color: rgba(74, 207, 238, 0.1);
+        border: 2px solid #4acfee;
+        border-radius: 15px;
+        padding: 20px 30px;
+        backdrop-filter: blur(5px);
+        transition: 0.3s;
+      }
+      .experience-item:hover {
+        box-shadow: 0 0 15px #4acfee;
+        transform: translateY(-5px);
+      }
+      .experience-item h3 {
+        color: #4acfee;
+        margin-bottom: 10px;
+        font-size: 22px;
+      }
+      .experience-item h4 {
+        color: white;
+        margin-bottom: 5px;
+        font-size: 18px;
+        font-weight: normal;
+      }
+      .experience-item .date {
+        color: #53f8c9;
+        font-weight: bold;
+        margin-bottom: 15px;
+        font-size: 16px;
+      }
+      .experience-item ul {
+        margin-left: 20px;
+        margin-top: 10px;
+      }
+      .experience-item ul li {
+        margin-bottom: 8px;
+        line-height: 1.5;
+      }
+
+      /* =======================================
+         SKILLS SECTION
+      ======================================= */
+      .skills-section {
+        margin-top: 70px;
+        margin-bottom: 40px;
+      }
+
+      .skills-header h2 {
+        font-size: 30px;
+        text-transform: uppercase;
+        background: linear-gradient(
+          to right,
+          #4acfee,
+          #53f8c9,
+          #6070fd,
+          #5bbdff,
+          #4acfee
+        );
+        background-size: 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: animate-gradient 2.5s linear infinite;
+        margin-bottom: 30px;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 25px;
+      }
+
+      .skill-card {
+        background-color: rgba(74, 207, 238, 0.1);
+        border: 2px solid #4acfee;
+        border-radius: 15px;
+        padding: 20px;
+        text-align: center;
+        transition: 0.3s;
+        backdrop-filter: blur(5px);
+      }
+
+      .skill-card:hover {
+        box-shadow: 0 0 15px #4acfee;
+        transform: translateY(-5px);
+      }
+
+      .skill-card i {
+        font-size: 40px;
+        color: #4acfee;
+        margin-bottom: 15px;
+      }
+
+      .skill-card h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: white;
+      }
+
+      /* =======================================
+         MEDIA QUERIES
+      ======================================= */
+      @media (max-width: 980px) {
+        .about-content {
+          flex-direction: column;
+        }
+        .about-img {
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Background video -->
+    <video autoplay loop muted plays-inline class="back-vid">
+      <source src="images/galaxy.mp4" type="video/mp4" />
+    </video>
+
+    <section class="main-section">
+      <!-- Navigation -->
+      <nav>
+        <h1 data-aos="zoom-in" data-aos-duration="1000">
+          <span style="color: #4acfee">Port</span>folio
+        </h1>
+        <ul>
+          <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <a href="index.html">Home</a>
+          </li>
+          <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <a class="active" href="#">About</a>
+          </li>
+          <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+            <a href="#">Projects</a>
+          </li>
+          <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+            <a href="skills.html">Skills</a>
+          </li>
+          <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- ABOUT SECTION -->
+      <div class="about-section">
+        <div class="about-header">
+          <h1 data-aos="fade-right" data-aos-duration="1000">About Me</h1>
+          <h2 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+            Flutter Developer & Computer Science Student
+          </h2>
+        </div>
+
+        <div class="about-content">
+          <div class="about-img" data-aos="zoom-in" data-aos-duration="1500">
+            <img src="images/man1.png" alt="Hazem Mohamed" />
+          </div>
+
+          <div class="about-text">
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+              I am a Mobile App Developer skilled in Flutter, Dart, Java, and
+              Kotlin, with a focus on creating efficient, user-friendly, and
+              secure applications. Currently finishing my Computer Science
+              degree at Assiut University, I specialize in developing mobile
+              solutions that integrate modern technologies.
+            </p>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+              My passion for mobile development started during my university
+              studies, where I discovered the power of creating applications
+              that can make a real impact on users' lives. I enjoy solving
+              complex problems and turning innovative ideas into functional,
+              beautiful apps.
+            </p>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+              With experience in both cross-platform and native development, I
+              can adapt to different project requirements and deliver solutions
+              that meet client needs while providing excellent user experiences.
+            </p>
+          </div>
+        </div>
+
+        <!-- EXPERIENCE SECTION (SINGLE-COLUMN) -->
+        <div class="experience-section">
+          <div class="experience-header">
+            <h2 data-aos="fade-right" data-aos-duration="1000">
+              Education & Experience
+            </h2>
+          </div>
+
+          <div class="experience-list">
+            <!-- 1. Bachelor of Science -->
+            <div
+              class="experience-item"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            >
+              <h3>Bachelor of Science in Computer Science</h3>
+              <h4>
+                Assiut University – Faculty of Science - Computer Science
+                Department
+              </h4>
+              <p class="date">October 2020 – July 2025 (Expected)</p>
+              <p>
+                Gained a strong foundation in programming, algorithms, and
+                software development.
+              </p>
+              <ul>
+                <li>
+                  Specialized in mobile application development, artificial
+                  intelligence, and web technologies
+                </li>
+                <li>
+                  Completed projects involving machine learning, Flutter
+                  development, and API integration
+                </li>
+                <li>
+                  Developed expertise in programming languages such as Python,
+                  Java, Kotlin, HTML/CSS, and JavaScript
+                </li>
+              </ul>
+            </div>
+
+            <!-- 2. Mobile Application Development Intern -->
+            <div
+              class="experience-item"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="300"
+            >
+              <h3>Mobile Application Development Intern</h3>
+              <h4>
+                Digital Pioneers of Egypt Initiative – Ministry of
+                Communications
+              </h4>
+              <p class="date">October 2024 – Present</p>
+              <p>
+                Developing cross-platform mobile applications using Flutter and
+                Dart.
+              </p>
+              <ul>
+                <li>
+                  Learned and implemented Java, Kotlin, and Android development
+                  to build native mobile solutions
+                </li>
+                <li>
+                  Collaborating with mentors and peers to create scalable,
+                  user-friendly, and secure apps
+                </li>
+                <li>
+                  Enhancing skills in mobile UI/UX design, debugging, and
+                  optimizing app performance
+                </li>
+              </ul>
+            </div>
+
+            <!-- 3. University Project Developer -->
+            <div
+              class="experience-item"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="400"
+            >
+              <h3>University Project Developer</h3>
+              <h4>Assiut University</h4>
+              <p class="date">April 2024 – April 2025</p>
+              <p>
+                Integrated an AI model API into a mobile application to
+                demonstrate advanced functionality.
+              </p>
+              <ul>
+                <li>
+                  Designed and developed the app using Flutter, ensuring
+                  seamless user experience and interaction
+                </li>
+                <li>
+                  Focused on optimizing app performance and successfully
+                  delivered a project combining AI and mobile technologies
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        
+
+    <!-- AOS (Animate On Scroll) JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

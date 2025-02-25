@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Skills - Portfolio</title>
+
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* =======================================
+         GENERAL STYLES
+      ======================================= */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #0e1217;
+      }
+
+      /* Background Video */
+      .back-vid {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        object-fit: cover;
+      }
+
+      /* Navigation */
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 10%;
+        background-color: transparent;
+      }
+      nav h1 {
+        color: white;
+        font-size: 28px;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+      nav ul li a:hover,
+      nav ul li a.active {
+        color: #4acfee;
+      }
+
+      /* Main Section */
+      .main-section {
+        width: 100%;
+        min-height: 100vh;
+        position: relative;
+      }
+
+      /* Gradient animation for headings */
+      @keyframes animate-gradient {
+        0% {
+          background-position: 0%;
+        }
+        100% {
+          background-position: 200%;
+        }
+      }
+
+      /* =======================================
+         SKILLS SECTION
+      ======================================= */
+      .skills-section {
+        padding: 0 10%;
+        color: white;
+        margin-top: 80px;
+        margin-bottom: 80px;
+      }
+
+      .skills-header h2 {
+        font-size: 30px;
+        text-transform: uppercase;
+        background: linear-gradient(
+          to right,
+          #4acfee,
+          #53f8c9,
+          #6070fd,
+          #5bbdff,
+          #4acfee
+        );
+        background-size: 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: animate-gradient 2.5s linear infinite;
+        margin-bottom: 30px;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 25px;
+      }
+
+      .skill-card {
+        background-color: rgba(74, 207, 238, 0.1);
+        border: 2px solid #4acfee;
+        border-radius: 15px;
+        padding: 20px;
+        text-align: center;
+        transition: 0.3s;
+        backdrop-filter: blur(5px);
+      }
+
+      .skill-card:hover {
+        box-shadow: 0 0 15px #4acfee;
+        transform: translateY(-5px);
+      }
+
+      .skill-card i {
+        font-size: 40px;
+        color: #4acfee;
+        margin-bottom: 15px;
+      }
+
+      .skill-card h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: white;
+      }
+
+      /* Soft Skills spacing */
+      .soft-skills-section {
+        margin-top: 50px;
+      }
+
+      @media (max-width: 980px) {
+        /* Make sure grid adjusts on smaller screens */
+        .skills-grid {
+          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Background video -->
+    <video autoplay loop muted plays-inline class="back-vid">
+      <source src="images/galaxy.mp4" type="video/mp4" />
+    </video>
+
+    <!-- NAVIGATION -->
+    <nav>
+      <h1 data-aos="zoom-in" data-aos-duration="1000">
+        <span style="color: #4acfee">Port</span>folio
+      </h1>
+      <ul>
+        <!-- Update these links as needed -->
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+          <a href="index.html">Home</a>
+        </li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <a href="about.html">About</a>
+        </li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+          <a href="#">Projects</a>
+        </li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+          <!-- Mark "Skills" as active -->
+          <a class="active" href="skills.html">Skills</a>
+        </li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- MAIN SECTION -->
+    <section class="main-section">
+      <!-- TECHNICAL SKILLS SECTION -->
+      <div class="skills-section">
+        <div class="skills-header">
+          <h2 data-aos="fade-right" data-aos-duration="1000">
+            Technical Skills
+          </h2>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Flutter -->
+          <div
+            class="skill-card"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+          >
+            <i class="bx bxl-flutter"></i>
+            <h3>Flutter</h3>
+          </div>
+
+          <!-- Android -->
+          <div
+            class="skill-card"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <i class="bx bxl-android"></i>
+            <h3>Android</h3>
+          </div>
+
+          <!-- Java -->
+          <div
+            class="skill-card"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+          >
+            <i class="bx bxl-java"></i>
+            <h3>Java</h3>
+          </div>
+
+          <!-- Kotlin -->
+          <div
+            class="skill-card"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+          >
+            <i class="bx bxl-kotlin"></i>
+            <h3>Kotlin</h3>
+          </div>
+
+          <!-- Dart -->
+          <div
+            class="skill-card"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="500"
+          >
+            <i class="bx bx-code-alt"></i>
+            <h3>Dart</h3>
+          </div>
+
+          <!-- Python -->
+          <div
+            class="skill-card"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="600"
+          >
+            <i class="bx bxl-python"></i>
+            <h3>Python</h3>
+          </div>
+
+          <!-- HTML/CSS -->
+          <div
+            class="skill-card"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="700"
+          >
+            <i class="bx bxl-html5"></i>
+            <h3>HTML/CSS</h3>
+          </div>
+
+          <!-- JavaScript -->
+          <div
+            class="skill-card"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="800"
+          >
+            <i class="bx bxl-javascript"></i>
+            <h3>JavaScript</h3>
+          </div>
+
+          <!-- API Integration -->
+          <div
+            class="skill-card"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="900"
+          >
+            <i class="bx bx-data"></i>
+            <h3>API Integration</h3>
+          </div>
+
+          <!-- AI Integration -->
+          <div
+            class="skill-card"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="1000"
+          >
+            <i class="bx bx-brain"></i>
+            <h3>AI Integration</h3>
+          </div>
+
+          <!-- UI/UX Design -->
+          <div
+            class="skill-card"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="1100"
+          >
+            <i class="bx bx-palette"></i>
+            <h3>UI/UX Design</h3>
+          </div>
+
+          <!-- Git & GitHub -->
+          <div
+            class="skill-card"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="1200"
+          >
+            <i class="bx bx-git-branch"></i>
+            <h3>Git & GitHub</h3>
+          </div>
+        </div>
+
+        <!-- SOFT SKILLS SECTION -->
+        <div class="soft-skills-section">
+          <div class="soft-skills-header">
+            <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+              Soft Skills
+            </h2>
+          </div>
+          <div class="skills-grid">
+            <div
+              class="skill-card"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-delay="300"
+            >
+              <i class="bx bx-chat"></i>
+              <h3>Communication</h3>
+            </div>
+            <div
+              class="skill-card"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-delay="400"
+            >
+              <i class="bx bx-group"></i>
+              <h3>Teamwork</h3>
+            </div>
+            <div
+              class="skill-card"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-delay="500"
+            >
+              <i class="bx bx-brain"></i>
+              <h3>Problem-Solving</h3>
+            </div>
+            <div
+              class="skill-card"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-delay="600"
+            >
+              <i class="bx bx-time"></i>
+              <h3>Time Management</h3>
+            </div>
+            <div
+              class="skill-card"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-delay="700"
+            >
+              <i class="bx bx-bulb"></i>
+              <h3>Adaptability</h3>
+            </div>
+            <div
+              class="skill-card"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-delay="800"
+            >
+              <i class="bx bx-tachometer"></i>
+              <h3>Continuous Learning</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AOS (Animate On Scroll) JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
