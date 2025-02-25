@@ -1,97 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hazem Dev | Mobile App Developer</title>
-  <!-- Link to your CSS file -->
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Portfolio Website</title>
 </head>
 <body>
-  <!-- Header / Hero Section -->
-  <header class="hero">
-    <nav class="navbar">
-      <div class="container nav-container">
-        <a class="logo" href="#">HazemDev</a>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div class="hero-content">
-      <h1>Hi, I'm Hazem Dev</h1>
-      <p>Mobile App Developer | Flutter &amp; Kotlin</p>
-      <a class="cta-button" href="#projects">View My Work</a>
-    </div>
-  </header>
-
-  <!-- About Section -->
-  <section id="about" class="section about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        I'm a passionate mobile app developer specializing in Flutter and Kotlin.
-        I build interactive, high-performance applications with a focus on
-        clean design and smooth user experiences.
-      </p>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <!-- Example Project Card -->
-        <div class="project-card">
-          <img src="images/newme.png" alt="Project 1 Screenshot" />
-          <div class="card-content">
-            <h3>Project One</h3>
-            <p>A brief description of Project One highlighting its interactive features and the technologies used.</p>
-            <a class="project-link" href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
-          </div>
+    <nav>
+        <div class="container">
+            <div class="logo"><h1><strong>Stephen</strong> Robert</h1></div>
+            <div class="links">
+                <a href="">Service</a>
+                <a href="">Works</a>
+                <a href="">Notes</a>
+                <a href="">Contacts</a>
+            </div>
+            <div class="social-links">
+                <div class="twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <label for="">Twitter</label>
+                </div>
+                <div class="github">
+                    <i class="fa-brands fa-github"></i>
+                    <label for="">Github</label>
+                </div>
+                <div class="mail"><i class="fa-regular fa-envelope"></i></div>
+            </div>
         </div>
-        <!-- Repeat additional project cards as needed -->
-      </div>
+    </nav>
+    <section>
+        <div class="content">
+            <div class="heading">
+                <h3 data-aos="fade-right" data-aos-duration="1100" data-aos-delay="200">Front-end Developer</h3>
+                <h1 data-aos="fade-right" data-aos-duration="1100" data-aos-delay="400">Talk is Cheap. <span>Show me the Code</span></h1>
+                <p data-aos="fade-right" data-aos-duration="1100" data-aos-delay="600">I design and code beautifully simple things. and I love what I do.</p>
+                <button data-aos="fade-right" data-aos-duration="1100" data-aos-delay="800">LET'S CHAT</button>
+            </div>
+            <div class="image" data-aos="fade-left" data-aos-duration="1500"><img src="profile.png" alt=""></div>
+        </div>
+    </section>
+    <div class="quality">
+        <div class="experience">
+            <h1>12</h1>
+            <label for="">YEARS EXPERIENCE</label>
+        </div>
+        <div class="experience gap">
+            <h1>165</h1>
+            <label for="">PROJECTS COMPLETED ON 18 COUNTRIES</label>
+        </div>
     </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Hazem Dev. All rights reserved.</p>
-      <div class="social-links">
-        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/hazem" target="_blank">LinkedIn</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- JavaScript for smooth scrolling -->
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-          behavior: "smooth",
-        });
-      });
-    });
-  </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
