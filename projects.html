@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - Portfolio</title>
+
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* GENERAL STYLES */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #0e1217;
+      }
+      /* Background Video */
+      .back-vid {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        object-fit: cover;
+      }
+      /* NAVIGATION */
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 10%;
+        background-color: transparent;
+      }
+      nav h1 {
+        color: white;
+        font-size: 28px;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+      nav ul li a:hover,
+      nav ul li a.active {
+        color: #4acfee;
+      }
+      /* MAIN SECTION */
+      .main-section {
+        width: 100%;
+        min-height: 100vh;
+        position: relative;
+        padding-bottom: 80px;
+      }
+      /* Gradient Animation */
+      @keyframes animate-gradient {
+        0% {
+          background-position: 0%;
+        }
+        100% {
+          background-position: 200%;
+        }
+      }
+      /* PROJECTS SECTION */
+      .projects-section {
+        padding: 0 10%;
+        color: white;
+        margin-top: 80px;
+      }
+      .projects-header h2 {
+        font-size: 30px;
+        text-transform: uppercase;
+        background: linear-gradient(
+          to right,
+          #4acfee,
+          #53f8c9,
+          #6070fd,
+          #5bbdff,
+          #4acfee
+        );
+        background-size: 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: animate-gradient 2.5s linear infinite;
+        margin-bottom: 30px;
+      }
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 25px;
+      }
+      .project-card {
+        background-color: rgba(74, 207, 238, 0.1);
+        border: 2px solid #4acfee;
+        border-radius: 15px;
+        overflow: hidden;
+        transition: 0.3s;
+        backdrop-filter: blur(5px);
+      }
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 15px #4acfee;
+      }
+      .project-card img {
+        width: 100%;
+        height: auto; /* Allow the height to adjust */
+        object-fit: contain; /* Use 'contain' to show the whole image */
+      }
+
+      .project-info {
+        padding: 20px;
+      }
+      .project-info h3 {
+        font-size: 22px;
+        color: #4acfee;
+        margin-bottom: 10px;
+      }
+      .project-info p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+      }
+      .project-info a.btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4acfee;
+        color: #0e1217;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+      .project-info a.btn:hover {
+        background-color: #53f8c9;
+      }
+      @media (max-width: 980px) {
+        .projects-grid {
+          grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Background Video -->
+    <video autoplay loop muted plays-inline class="back-vid">
+      <source src="images/galaxy.mp4" type="video/mp4" />
+    </video>
+
+    <!-- NAVIGATION -->
+    <nav>
+      <h1 data-aos="zoom-in" data-aos-duration="1000">
+        <span style="color: #4acfee">Port</span>folio
+      </h1>
+      <ul>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+          <a href="index.html">Home</a>
+        </li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <a href="about.html">About</a>
+        </li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+          <a class="active" href="projects.html">Projects</a>
+        </li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+          <a href="skills.html">Skills</a>
+        </li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- MAIN SECTION -->
+    <section class="main-section">
+      <div class="projects-section">
+        <div class="projects-header">
+          <h2 data-aos="fade-right" data-aos-duration="1000">Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project Card 1: E-commerce App -->
+          <div
+            class="project-card"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+          >
+            <img src="images/e-commerce.png" alt="E-commerce App" />
+            <div class="project-info">
+              <h3>E-commerce App</h3>
+              <p>
+                Created a prototype for an e-commerce mobile app, featuring
+                seamless navigation and a secure checkout process.
+              </p>
+              <a
+                href="#"
+                class="btn"
+                data-url="https://www.linkedin.com/feed/update/urn:li:ugcPost:7282814805785133058"
+                >View Details</a
+              >
+            </div>
+          </div>
+
+          <!-- Project Card 2: Audio Player App -->
+          <div
+            class="project-card"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <img src="images/audio_player.png" alt="Audio Player App" />
+            <div class="project-info">
+              <h3>Cross-Platform Audio Player</h3>
+              <p>
+                Developed a native Android audio player app using Kotlin that
+                plays audio files from the device storage.
+              </p>
+              <a
+                href="#"
+                class="btn"
+                data-url="https://www.linkedin.com/feed/update/urn:li:ugcPost:7298340698116759552"
+                >View Details</a
+              >
+            </div>
+          </div>
+
+          <!-- Project Card 3: Login & Signup -->
+          <div
+            class="project-card"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+          >
+            <img src="images/auth_login.png" alt="Login & Signup" />
+            <div class="project-info">
+              <h3>Login & Signup Functionality</h3>
+              <p>
+                Designed and implemented login and signup screens with Google
+                authentication using Firebase Auth.
+              </p>
+              <a
+                href="#"
+                class="btn"
+                data-url="https://www.linkedin.com/feed/update/urn:li:ugcPost:7298322864636665856"
+                >View Details</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AOS (Animate On Scroll) JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      // Instead of loading LinkedIn posts in an iframe (which LinkedIn blocks),
+      // open the LinkedIn URL in a new tab.
+      const detailButtons = document.querySelectorAll(".project-info .btn");
+      detailButtons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+          e.preventDefault();
+          const postUrl = button.getAttribute("data-url");
+          window.open(postUrl, "_blank");
+        });
+      });
+    </script>
+  </body>
+</html>

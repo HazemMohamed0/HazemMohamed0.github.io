@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Portfolio</title>
+
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Basic Styles */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #0e1217;
+        color: #fff;
+      }
+
+      /* Background Video */
+      .back-vid {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        object-fit: cover;
+      }
+
+      /* Navigation */
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 10%;
+        background-color: transparent;
+      }
+      nav h1 {
+        color: white;
+        font-size: 28px;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+      nav ul li a:hover,
+      nav ul li a.active {
+        color: #4acfee;
+      }
+
+      /* Main Section */
+      .main-section {
+        width: 100%;
+        min-height: 100vh;
+        padding: 80px 10%;
+        box-sizing: border-box;
+      }
+
+      /* Contact Header */
+      .contact-header h2 {
+        font-size: 30px;
+        text-transform: uppercase;
+        background: linear-gradient(
+          to right,
+          #4acfee,
+          #53f8c9,
+          #6070fd,
+          #5bbdff,
+          #4acfee
+        );
+        background-size: 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: animate-gradient 2.5s linear infinite;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .contact-encouragement {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 40px;
+      }
+
+      @keyframes animate-gradient {
+        0% {
+          background-position: 0%;
+        }
+        100% {
+          background-position: 200%;
+        }
+      }
+
+      /* Contact Container */
+      .contact-container {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      /* Contact Form */
+      .contact-form {
+        flex: 1;
+        min-width: 300px;
+        max-width: 500px;
+        background: rgba(74, 207, 238, 0.1);
+        border: 2px solid #4acfee;
+        padding: 30px;
+        border-radius: 10px;
+        backdrop-filter: blur(5px);
+      }
+      .contact-form label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        font-size: 16px;
+      }
+      .contact-form textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+      .contact-form button {
+        padding: 10px 20px;
+        background-color: #4acfee;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        color: #0e1217;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .contact-form button:hover {
+        background-color: #53f8c9;
+      }
+
+      /* Contact Details */
+      .contact-details {
+        flex: 1;
+        min-width: 300px;
+        max-width: 500px;
+        background: rgba(74, 207, 238, 0.1);
+        border: 2px solid #4acfee;
+        padding: 30px;
+        border-radius: 10px;
+        backdrop-filter: blur(5px);
+      }
+      .contact-details h3 {
+        font-size: 24px;
+        color: #4acfee;
+        margin-bottom: 20px;
+      }
+      .contact-details p {
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+      .contact-details a {
+        color: #4acfee;
+        text-decoration: none;
+      }
+
+      @media (max-width: 980px) {
+        .contact-container {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Background Video -->
+    <video autoplay loop muted plays-inline class="back-vid">
+      <source src="images/galaxy.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Navigation -->
+    <nav>
+      <h1 data-aos="zoom-in" data-aos-duration="1000">
+        <span style="color: #4acfee;">Port</span>folio
+      </h1>
+      <ul>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+          <a href="index.html">Home</a>
+        </li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <a href="about.html">About</a>
+        </li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+          <a href="projects.html">Projects</a>
+        </li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+          <a href="skills.html">Skills</a>
+        </li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+          <a class="active" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="main-section">
+      <div class="contact-header">
+        <h2 data-aos="fade-right" data-aos-duration="1000">Contact Me</h2>
+      </div>
+      
+      <!-- Encouraging Sentence -->
+      <p class="contact-encouragement" data-aos="fade-up" data-aos-duration="1000">
+        Have a groundbreaking app idea? Contact me today and let's turn it into reality!
+      </p>
+
+      <div class="contact-container">
+        <!-- Contact Form -->
+        <div class="contact-form" data-aos="fade-up" data-aos-duration="1000">
+          <form action="https://formspree.io/f/{your_form_id}" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required />
+
+            <label for="message">Project Details</label>
+            <textarea id="message" name="message" placeholder="Describe your project..." required></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="contact-details" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <h3>Get in Touch</h3>
+          <p><strong>Phone:</strong> +201226062899</p>
+          <p><strong>WhatsApp & Telegram:</strong> +201155455519</p>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:Hazemswefy1111@gmail.com">Hazemswefy1111@gmail.com</a>
+          </p>
+          <p>
+            <strong>LinkedIn:</strong>
+            <a href="https://www.linkedin.com/in/hazem-mohamed-21958b345/" target="_blank">Hazem Mohamed</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
